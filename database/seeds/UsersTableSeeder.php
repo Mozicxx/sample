@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder
         $user->email = 'wpyang_code@126.com';
         $user->password = bcrypt('password');
         $user->is_admin = true;
+        $user->activated = true;
         $user->save();
     }
 }

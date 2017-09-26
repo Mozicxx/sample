@@ -22,6 +22,7 @@ $factory->define(App\Models\User::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'is_admin' => false,
+        'activated' => true,
         'remember_token' => str_random(10),
         'created_at' => $datetime,
         'updated_at' => $datetime,
