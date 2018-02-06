@@ -117,4 +117,9 @@ class UsersController extends Controller
             $message->from($from, $name)->to($to)->subject($subject);
         });
     }
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPassword($token));
+    }
 }
